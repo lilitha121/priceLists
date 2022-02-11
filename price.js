@@ -31,9 +31,9 @@ meals = JSON.parse(localStorage.getItem("food"))
   ? JSON.parse(localStorage.getItem("food"))
   : meals;
 
-  let cart = JSON.parse(localStorage.getItem("cart"))
-    ? JSON.parse(localStorage.getItem("cart"))
-    : [];
+let cart = JSON.parse(localStorage.getItem("cart"))
+  ? JSON.parse(localStorage.getItem("cart"))
+  : [];
 // console.log(meals);
 
 function readCard(meals) {
@@ -149,8 +149,22 @@ function updateMeal(position) {
 // cart fuction
 
 function addToCart(position) {
-    
-  cart.push(meals[position])
-      localStorage.setItem("cart", JSON.stringify(cart));
-console.log(cart);
+  let qty = 1;
+  let inCart = false;
+  cart.forEach((item) => {
+    if (item.name == meals[position].name) {
+      item.qty += 1;
+      inCart = true;
+    }
+  });
+
+  if (!inCart) {
+    cart.push({
+      ...meals[position],
+      qty,
+    });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  console.log(cart);
 }

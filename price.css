@@ -1,16 +1,16 @@
-#food{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+#food {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-h1{
-    text-align: center;
-    text-size-adjust: 120px;
+h1 {
+  text-align: center;
+  text-size-adjust: 120px;
 }
 
-.add{
-    width: 10%;
+.add {
+  width: 10%;
 }
 
 /* nav bar */
@@ -21,6 +21,11 @@ h1{
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 5;
+}
+
+.cartItems {
+  padding-top: 100px;
 }
 
 .navbar a {
