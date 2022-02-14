@@ -6,25 +6,18 @@ let meals = [
     img: "https://images.rove.me/w_1920,q_85/nbpzg8zcrttoqjkoyabe/south-africa-phutu-umphokoqo.jpg",
   },
   {
-    title: "Umpokoqo",
-    price: "R19,99",
-    catergory: "dairy",
-
-    img: "https://images.rove.me/w_1920,q_85/nbpzg8zcrttoqjkoyabe/south-africa-phutu-umphokoqo.jpg",
+    title: "orange juice",
+    price: "R16,99",
+    catergory: "liquids",
+    img: "https://www.collinsdictionary.com/images/full/fruitjuice_148446767.jpg",
   },
-  {
-    title: "Umpokoqo",
-    price: "R19,99",
-    catergory: "dairy",
 
-    img: "https://images.rove.me/w_1920,q_85/nbpzg8zcrttoqjkoyabe/south-africa-phutu-umphokoqo.jpg",
-  },
   {
-    title: "Umpokoqo",
-    price: "R19,99",
-    catergory: "dairy",
+    title: "Apple",
+    price: "R5,99",
+    catergory: "fruit",
 
-    img: "https://images.rove.me/w_1920,q_85/nbpzg8zcrttoqjkoyabe/south-africa-phutu-umphokoqo.jpg",
+    img: "https://sc04.alicdn.com/kf/Ub20e768717be4ffcbfc408c056f99582C.jpg",
   },
 ];
 meals = JSON.parse(localStorage.getItem("food"))
@@ -53,8 +46,8 @@ function readCard(meals) {
     </div>
  
   <div class="card-body">
-    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editFood${position}">UPDATE</a>
-    <a href="#" class="btn btn-primary " onclick="deleteCard(${position})">DELETE</a>
+    <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editFood${position}">UPDATE</a>
+    <a href="#" class="btn btn-danger " onclick="deleteCard(${position})">DELETE</a>
     <a href="#" class="btn btn-primary " onclick="addToCart(${position})">Add to Cart</a>
   </div>
 </div>

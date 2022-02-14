@@ -15,7 +15,8 @@ function readCart(array) {
       <div class="card-body">
         <h5 class="card-title">${item.title}</h5>
         <input type="number" value="${item.qty}" onchange="addtoQty(${this.value}, ${index})">
-        <button onclick="deleteCart(${index})"> delete </button>
+        <button type="button" onclick="deleteCart(${index})" class="btn btn-danger">Delete</button>
+
       </div>
     </div>
   </div>
