@@ -1,50 +1,26 @@
-#food {
-  display: flex;
+#products {
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 20px;
 }
 
-h1 {
-  text-align: center;
-  text-size-adjust: 120px;
+img {
+  height: 200px !important;
+  object-fit: cover;
 }
 
-.add {
-  width: 10%;
+.card {
+  width: calc((100% / 4) - 15px);
+  min-width: 300px;
 }
 
-/* nav bar */
-
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 5;
+.card-title {
+  text-transform: capitalize;
 }
 
-.cartItems {
-  padding-top: 100px;
+.white-text{
+  color: white;
 }
-
-.navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.navbar a:hover {
-  background: #ddd;
-  color: black;
-}
-
-.main {
-  padding: 16px;
-  margin-top: 30px;
-  height: 1500px; /* Used in this example to enable scrolling */
+body{
+  background-image: url("./xhosa.bg.jpg");
+  background-size: cover;
 }
